@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Movie Recommendation</h2>
+        <form action="/" method="post">
+            <input type="text" name="movie_name" placeholder="Enter movie name" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if recommendations %}
+            <h3>Recommended Movies:</h3>
+            <ul>
+                {% for movie in recommendations %}
+                    <li>
+                        <a href="https://www.google.com/search?q={{ movie | urlencode }}" target="_blank">
+                            {{ movie }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+</body>
+</html>

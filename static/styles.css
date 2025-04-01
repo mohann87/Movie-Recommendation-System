@@ -1,0 +1,84 @@
+/* Background Image */
+body {
+    background: url('../static/moviesbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;  /* White text for better readability */
+}
+
+/* Input Styling */
+input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 15px;
+    border: 2px solid rgb(71, 138, 146);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+button {
+    width: 95%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4500;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #c9ba3a;
+}
+
+/* Recommended Movies Styling */
+h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #ffcc00;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Make Movie Recommendations Clickable */
+ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
